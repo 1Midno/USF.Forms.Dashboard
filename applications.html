@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applications · Application Dashboard</title>
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-protected data-page="applications">
+<div class="app">
+  <header class="topbar" id="topbar"></header>
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+  <div class="backdrop" id="backdrop"></div>
+  <main class="main" id="main">
+    <div class="page-head"><div><h1>Applications</h1><p>Search, filter and open any application.</p></div></div>
+    <section class="card" aria-label="Applications">
+      <div class="toolbar">
+        <input class="input search" id="search" type="search" placeholder="Search by username, Discord ID or application ID" aria-label="Search applications">
+        <select class="input" id="filter-faction" aria-label="Filter by faction"><option value="All">Faction: All</option><option>Stormguard</option><option>Ironclad</option><option>Emberfall</option><option>Voidborn</option></select>
+        <select class="input" id="filter-status" aria-label="Filter by status"><option value="All">Status: All</option><option>Pending</option><option>Interview</option><option>Accepted</option><option>Denied</option></select>
+        <select class="input" id="sort" aria-label="Sort order"><option value="newest" selected>Newest first</option><option value="oldest">Oldest first</option></select>
+      </div>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">ID</th><th scope="col">Discord Username</th><th scope="col">Discord ID</th><th scope="col">Faction</th><th scope="col">Status</th><th scope="col">Submitted Date</th><th scope="col">Actions</th></tr></thead>
+        <tbody id="apps-body"></tbody>
+      </table></div>
+      <nav class="pager" id="pager" aria-label="Pagination" hidden><span id="pager-info"></span><div class="pager-btns" id="pager-btns"></div></nav>
+    </section>
+  </main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/applications.js"></script>
+</body>
+</html>

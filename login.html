@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login · Application Dashboard</title>
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<div class="auth-wrap">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Application Dashboard</a>
+  <div class="card auth-card">
+    <h1>Log in</h1>
+    <p class="sub">Welcome back. Log in to review applications.</p>
+    <div id="form-alert" class="alert" role="alert" hidden></div>
+    <div id="demo-note" class="alert alert-info" hidden>Demo mode: any valid email and password works. Use the password <strong>wrongpassword</strong> to preview the error message.</div>
+    <form id="login-form" novalidate>
+      <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required><div class="field-error" id="email-error"></div></div>
+      <div class="field"><label for="password">Password</label><input class="input" id="password" name="password" type="password" autocomplete="current-password" required><div class="field-error" id="password-error"></div></div>
+      <button class="btn btn-primary btn-block" type="submit" id="login-submit">Login</button>
+    </form>
+    <div class="divider">or</div>
+    <button class="btn btn-discord btn-block" type="button" id="discord-login">Login with Discord</button>
+    <p class="auth-foot">New here? <a href="register.html">Create an account</a></p>
+  </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
